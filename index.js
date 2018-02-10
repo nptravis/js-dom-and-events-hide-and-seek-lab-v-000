@@ -17,14 +17,10 @@ function deepestChild(){
     return div
 }
 
-function increaseRankBy(n) {
-    const rankedLists = document.querySelectorAll('.ranked-list')
-  
-    for (let i = 0, l = rankedLists.length; i < l; i++) {
-      let children = rankedLists[i].children
-  
-      for (let j = 0, k = children.length; j < k; j++) {
-        children[j].innerHTML = parseInt(children[j].innerHTML) + n
-      }
+function increaseRankBy(n){
+    let rankedList = document.querySelectorAll(".ranked-list li")
+    for(let i = 0; i < rankedList.length; ++i){
+        debugger
+        rankedList[i].innerText = parseInt(rankedList[i].innerText) + n
     }
-  }
+}
